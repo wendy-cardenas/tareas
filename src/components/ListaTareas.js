@@ -5,7 +5,7 @@ const ListaTareas = ({ tareas, eliminarTarea, cambiarEstado }) => {
     <ul>
       {tareas.map((tarea, index) => (
         <li key={index}>
-          <span style={{ textDecoration: tarea.completada ? "line-through" : "" }}>
+          <span style={{ backgroundColor: tarea.completada ? "green" : "white" }}>
             {tarea.nombre} - {tarea.descripcion}
           </span>
           <button onClick={() => cambiarEstado(index)}>
